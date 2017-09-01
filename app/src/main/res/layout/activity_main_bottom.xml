@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/main_bottom_id_happy"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/main_bottom_img_happy"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="#0000"
+            android:keepScreenOn="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/happy_selected"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_happy"
+            android:textColor="#000">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_bottom_id_record"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/main_bottom_img_record"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="#0000"
+            android:keepScreenOn="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/record_selected_no"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_menses"
+            android:textColor="#000"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_bottom_id_memory"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/main_bottom_img_memory"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="#0000"
+            android:keepScreenOn="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/memory_selected_no"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_memory"
+            android:textColor="#000"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

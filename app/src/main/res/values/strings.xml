@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- app use-->
+    <string name="app_name">爱妻(倪)</string>
+
+    <string name="title_activity_splash">爱妻(倪)</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+    <!--splash use-->
+    <string name="splash_myword">我的思念在你看不到的地方.......</string>
+    <string name="splash_hint">5(s)点击跳转</string>
+
+
+    <!--main use-->
+    <string name="main_memory">时光记忆</string>
+    <string name="main_happy">记录我们的365</string>
+    <string name="main_menses">记录老朋友</string>
+
+
+</resources>
