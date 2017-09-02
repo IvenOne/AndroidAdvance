@@ -23,7 +23,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 
 
     private ViewPager vp;
-    private Map<Integer,Fragment> map = new HashMap<Integer,Fragment>();
+    private Map<Integer,Fragment> map = new HashMap<>();
     private MemoryFragment memoryFragment = new MemoryFragment();
     private HappyFragment happyFragment = new HappyFragment();
     private RecordFragment recordFragment = new RecordFragment();
@@ -129,5 +129,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 vp.setCurrentItem(1);
                 break;
         }
+    }
+
+    /**
+     * For interacting with main activity in textview ,return the head title.
+     * @return TextView
+     */
+    public TextView getHeadTextView(){
+        return tv;
     }
 }

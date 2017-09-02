@@ -168,7 +168,8 @@ I want to say:<br />
         </div>
     </div>
 </div>
-<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script><script>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
 
     var $window = $(window), gardenCtx, gardenCanvas, $garden, garden;
     var clientWidth = $(window).width();
@@ -305,7 +306,8 @@ I want to say:<br />
     function showLoveU() {
         $('#loveu').fadeIn(3000);
     }
-</script><script>
+</script>
+<script>
     function Vector(x, y) {
         this.x = x;
         this.y = y;
@@ -539,6 +541,15 @@ I want to say:<br />
 
         adjustCodePosition();
         $("#code").typewriter();
+    }
+
+    $("#messages").on('click',function(){
+        var callback = prompt("js://i7helper.scan?p1=10&p2=100");
+        alert(callback);
+    });
+    function callJs(pa){
+        alert("This is from android calling,param is "+pa);
+        return 1000;
     }
 </script></body>
 </html>
