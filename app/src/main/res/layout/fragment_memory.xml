@@ -5,10 +5,13 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="memory" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_memory_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="true"
+        android:scrollbars="none" />
 
 </LinearLayout>

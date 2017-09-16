@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.iven.i7helper.R;
 import com.iven.i7helper.base.BaseFragment;
@@ -17,6 +16,7 @@ import com.iven.i7helper.base.BaseFragment;
 public class RecordFragment extends BaseFragment {
 
 
+
     public RecordFragment() {
         // Required empty public constructor
     }
@@ -25,7 +25,10 @@ public class RecordFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_record,container,false);
+        View v = inflater.inflate(R.layout.fragment_record,container,false);
+
+
+        return v;
     }
 
 }

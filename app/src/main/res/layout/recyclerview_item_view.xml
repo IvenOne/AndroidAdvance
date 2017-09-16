@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp">
+    <TextView
+        android:id="@+id/item_timeline_time"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="4dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:text="2016-06-08\n09:56"
+        android:layout_alignTop="@+id/memory_item_words_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:id="@+id/item_timeline_icon_layout"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@id/item_timeline_time">
+
+        <com.iven.i7helper.ui.CircleView
+            android:id="@+id/item_timeline_icon_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@android:color/transparent"
+            app:civ_border_width="4dp" />
+
+        <ImageView
+            android:id="@+id/item_timeline_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/happy_selected"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/memory_item_words_layout"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/item_timeline_icon_layout">
+        <TextView
+            android:id="@+id/memory_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/memory_item_title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/memory_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/memory_item_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/memory_item_smallP"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@id/memory_item_words_layout"
+        android:layout_alignTop="@id/item_timeline_time"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:src="@mipmap/our3"
+        android:scaleType="fitCenter"/>
+
+
+    <View
+        android:id="@+id/item_timeline_view"
+        android:layout_width="2dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@id/item_timeline_icon_layout"
+        android:layout_below="@id/item_timeline_icon_layout"
+        android:layout_marginLeft="15dp"
+        android:background="@color/colorAccent" />
+</RelativeLayout>

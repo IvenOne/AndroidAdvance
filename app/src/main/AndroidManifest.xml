@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
+        android:name="com.iven.i7helper.main.I7HelperApplication"
         android:allowBackup="true"
         android:icon="@mipmap/splash"
         android:label="@string/app_name"

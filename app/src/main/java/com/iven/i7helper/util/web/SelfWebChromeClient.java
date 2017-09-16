@@ -12,7 +12,6 @@ import com.iven.i7helper.util.ToolUtil;
 
 import java.util.HashMap;
 import java.util.Set;
-import java.util.StringTokenizer;
 
 
 /**
@@ -23,7 +22,7 @@ import java.util.StringTokenizer;
 public class SelfWebChromeClient extends WebChromeClient {
 
     private Context mContext;
-    private String TAG = "webChromeClient";
+    private String TAG = this.getClass().getName();
 
     public SelfWebChromeClient (Context mContext){
         this.mContext = mContext;
