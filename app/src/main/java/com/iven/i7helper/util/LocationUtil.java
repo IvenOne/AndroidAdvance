@@ -37,7 +37,7 @@ public class LocationUtil {
             public void onReceiveLocation(BDLocation bdLocation) {
                 locationInfo.setLatitude(bdLocation.getLatitude());
                 locationInfo.setLongitude(bdLocation.getLongitude());
-                locationInfo.setCurrent(new StringBuilder().append(bdLocation.getCountry()).append(" " + bdLocation.getProvince() + "省 ")
+                locationInfo.setCurrent(new StringBuilder().append(bdLocation.getCountry()).append(" " + bdLocation.getProvince() + " ")
                         .append(bdLocation.getCity() + " ").append(bdLocation.getDistrict() + " ").append(bdLocation.getStreet() + " ")
                         .append(bdLocation.getStreetNumber() + "号").toString());
                 if (bdLocation.getLocType() == BDLocation.TypeGpsLocation) {
@@ -47,7 +47,7 @@ public class LocationUtil {
                 } else {
                     locationInfo.setLoc_type("未知");
                 }
-                ToolUtil.showMessage(I7HelperApplication.getContext(),locationInfo.getCurrent()+"定位方式："+locationInfo.getLoc_type());
+//                ToolUtil.showMessage(I7HelperApplication.getContext(),locationInfo.getCurrent()+"定位方式："+locationInfo.getLoc_type());
                 locationInfo.save();
             }
         });
@@ -90,8 +90,8 @@ public class LocationUtil {
                             return;
                         }
                     }
+                    lu.requestLocation();
                 }
-                lu.requestLocation();
                 break;
             default:
         }

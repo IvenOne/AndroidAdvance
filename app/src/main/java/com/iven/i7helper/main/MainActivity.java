@@ -174,8 +174,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                             return;
                         }
                     }
+                    lu.requestLocation();
                 }
-                lu.requestLocation();
                 break;
             default:
         }
