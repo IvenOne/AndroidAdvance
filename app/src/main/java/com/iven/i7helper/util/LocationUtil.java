@@ -14,6 +14,7 @@ import com.iven.i7helper.bean.LocationBean;
 import com.iven.i7helper.main.I7HelperApplication;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -47,6 +48,7 @@ public class LocationUtil {
                 } else {
                     locationInfo.setLoc_type("未知");
                 }
+                locationInfo.setCurrent_date(new Date());
 //                ToolUtil.showMessage(I7HelperApplication.getContext(),locationInfo.getCurrent()+"定位方式："+locationInfo.getLoc_type());
                 locationInfo.save();
             }

@@ -66,6 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="@string/menstruation_item_remarks"
+            android:textColorHint="@color/colorPrimary"
             android:textColor="@color/colorPrimary"
             android:textSize="10sp" />
     </LinearLayout>
