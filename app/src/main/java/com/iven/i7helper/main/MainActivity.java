@@ -1,6 +1,11 @@
 package com.iven.i7helper.main;
 
+import android.Manifest;
+import android.app.Activity;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -15,8 +20,13 @@ import com.iven.i7helper.base.BaseActivity;
 import com.iven.i7helper.main.fragment.HappyFragment;
 import com.iven.i7helper.main.fragment.MemoryFragment;
 import com.iven.i7helper.main.fragment.RecordFragment;
+import com.iven.i7helper.util.LocationUtil;
+import com.iven.i7helper.util.PermissonRequestUtil;
+import com.iven.i7helper.util.ToolUtil;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener{
@@ -137,5 +147,57 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
      */
     public TextView getHeadTextView(){
         return tv;
+    }
+
+    @Override
+    protected void onResume() {
+        requestPermission();
+        super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        LocationUtil lu = LocationUtil.getLocationUtil();
+        lu.getmLocationClient().stop();
+        super.onDestroy();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        LocationUtil lu = LocationUtil.getLocationUtil();
+        switch (requestCode){
+            case 1:
+                if(grantResults.length > 0){
+                    for(int i : grantResults){
+                        if(i != PackageManager.PERMISSION_GRANTED){
+                            ToolUtil.showMessage(this,"不给权限会导致记录不准确");
+                            return;
+                        }
+                    }
+                }
+                lu.requestLocation();
+                break;
+            default:
+        }
+    }
+
+    private void requestPermission() {
+        LocationUtil lu = LocationUtil.getLocationUtil();
+        List<String> pl = new ArrayList<>();
+        if (!PermissonRequestUtil.check(Manifest.permission.ACCESS_FINE_LOCATION)) {
+            pl.add(Manifest.permission.ACCESS_FINE_LOCATION);
+        }
+        if (!PermissonRequestUtil.check(Manifest.permission.READ_PHONE_STATE)) {
+            pl.add(Manifest.permission.READ_PHONE_STATE);
+        }
+        if (!PermissonRequestUtil.check(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            pl.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        }
+        if (pl.isEmpty()) {
+            lu.requestLocation();
+        } else {
+            String peli[] = (String[]) pl.toArray();
+            ActivityCompat.requestPermissions(this, peli, 1);
+        }
     }
 }

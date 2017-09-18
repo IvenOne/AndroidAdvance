@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <litepal>
     <dbname value="I7DB"></dbname>
-    <version value="1.0"></version>
+    <version value="1"></version>
     <list>
         <mapping class="com.iven.i7helper.bean.MenstruationBean"></mapping>
         <mapping class="com.iven.i7helper.bean.LocationBean"></mapping>

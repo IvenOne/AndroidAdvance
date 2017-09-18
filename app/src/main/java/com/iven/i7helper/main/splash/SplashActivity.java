@@ -46,6 +46,7 @@ public class SplashActivity extends BaseActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_splash);
 
+
         tv = (TextView) findViewById(R.id.splash_timer);
 
         tv.setOnClickListener(new View.OnClickListener() {

@@ -23,4 +23,14 @@
     <string name="memory_item_content">你是快乐的，我就是幸运的，幸福走过的，再多我也值得</string>
 
 
+    <!--大姨妈使用-->
+    <string name="menstruation_start">点击选择开始时间</string>
+    <string name="menstruation_end">点击选择结束时间</string>
+    <string name="menstruation_remarks">在此输入备注，非必填</string>
+    <string name="menstruation_submit">记录</string>
+    <string name="menstruation_cancel">取消</string>
+    <string name="menstruation_history">历史记录</string>
+    <string name="menstruation_item_remarks">我大姨妈来了，但是这次我没写备注</string>
+
+
 </resources>

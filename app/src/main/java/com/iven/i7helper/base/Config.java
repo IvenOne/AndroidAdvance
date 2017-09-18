@@ -31,6 +31,10 @@ public class Config {
 
 
 
+    public static final String DATE_FORMAT = "yyyy年MM月dd日";
+
+
+
 
 
 }

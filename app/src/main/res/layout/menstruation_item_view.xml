@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp">
+    <TextView
+        android:id="@+id/menstruation_item_starttime"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="4dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:text="2016年06月08日"
+        android:layout_alignTop="@+id/memory_item_words_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:id="@+id/item_timeline_icon_layout"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@id/menstruation_item_starttime">
+
+        <com.iven.i7helper.ui.CircleView
+            android:id="@+id/item_timeline_icon_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@android:color/transparent"
+            app:civ_border_width="2dp" />
+
+        <ImageView
+            android:id="@+id/item_timeline_icon"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/memory_item_words_layout"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/item_timeline_icon_layout">
+        <TextView
+            android:id="@+id/menstruation_item_endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="2016年10月2日"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/menstruation_item_remarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/menstruation_item_remarks"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10sp" />
+    </LinearLayout>
+    
+
+
+    <View
+        android:id="@+id/item_timeline_view"
+        android:layout_width="2dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@id/item_timeline_icon_layout"
+        android:layout_below="@id/item_timeline_icon_layout"
+        android:layout_marginLeft="9dp"
+        android:background="@color/colorAccent" />
+</RelativeLayout>

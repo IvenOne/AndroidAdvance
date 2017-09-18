@@ -5,4 +5,9 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="black_overlay">#66000000</color>
+
+    <color name="black">#000000</color>
+    <color name="purpleRed">#ff00ff</color>
+    <color name="thinBlue">	#1e90ff</color>
+    <color name="jumise">#ffe4c4</color>
 </resources>

@@ -2,49 +2,95 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/jumise"
+    android:orientation="vertical"
+    android:weightSum="1">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="8dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:text="开始时间：" />
 
-        <EditText
-            android:id="@+id/editText"
+        <TextView
+            android:id="@+id/menstruation_starttime"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:gravity="center"
+            android:textStyle="bold"
+            android:hint="@string/menstruation_start"
+            android:background="@color/purpleRed" />
 
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="8dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:text="结束时间：" />
 
-        <EditText
-            android:id="@+id/editText2"
+        <TextView
+            android:id="@+id/menstruation_endtime"
             android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/thinBlue"
+            android:textStyle="bold"
+            android:hint="@string/menstruation_end" />
+        </LinearLayout>
+
+    <EditText
+        android:id="@+id/menstruation_remarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/menstruation_remarks"
+        android:inputType="textMultiLine"
+        android:layout_weight="0.52" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/menstruation_ok"
+            android:layout_gravity="left"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/menstruation_submit" />
+        <Button
+            android:id="@+id/menstruation_cancel"
+            android:layout_gravity="right"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/menstruation_cancel" />
+        <Button
+            android:id="@+id/menstruation_history"
+            android:layout_gravity="right"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
-
+            android:text="@string/menstruation_history" />
     </LinearLayout>
+
+
 
 </LinearLayout>
